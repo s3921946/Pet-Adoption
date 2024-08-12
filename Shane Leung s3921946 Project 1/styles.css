@@ -414,10 +414,38 @@ html, body {
 }
 
 .gallery-pets {
-    background-color: green;
-    height: 200px;
+    height: 210px;
     width: 300px;
     box-sizing: border-box;
     border: 3px solid grey;
     border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-pet-option {
+    width: 300px;
+}
+
+.image-caption {
+    margin: 0;
+    padding-top: 10px;
+    font-family: 'Ysabeau SC Thin';
+    font-size: 18px;
+    font-weight: bold;
+    color: black; 
+}
+
+.pets-top {
+    height: 160px;
+    width: 100%;
+}
+
+.pets-bottom {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    font-family: 'PoetsenOne';
 }
