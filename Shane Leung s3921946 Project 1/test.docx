@@ -45,5 +45,11 @@
         </div>
     </div>
 
+
+
+                <div class="add-centre-top"></div>
+            <div class="add-centre-middle"></div>
+            <div class="add-centre-bottom"></div>
+
 </body>
 </html>

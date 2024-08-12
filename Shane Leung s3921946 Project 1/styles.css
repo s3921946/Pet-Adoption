@@ -20,7 +20,6 @@ html, body {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -35,6 +34,12 @@ html, body {
 .flexbox-item-centre {
     min-height: 570px;  
     background-color: #fcf9ec;
+    flex-grow: 1;
+}
+
+.flexbox-item-centre-1 {
+    min-height: 570px;  
+    background-color: white;
     flex-grow: 1;
 }
 
@@ -252,4 +257,94 @@ html, body {
 .pets-content-table td {
     padding: 6px 10px;
     text-align: left;
+}
+
+/*-------------- Styles for add.HTML -------------- */
+
+.flexbox-add {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-centre-top {
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    font-family: 'Ysabeau SC Thin';
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.add-centre-middle {
+    width: 100%;
+    height: 400px;
+}
+
+.add-centre-bottom {
+    background-color: yellow;
+    width: 100%;
+    height: 70px;
+    
+}
+
+.add-center-heading {
+    margin-top: 10px;
+    font-size: large;
+    font-weight: lighter;
+    font-family: 'PoetsenOne';
+}
+
+
+.add-center-description {
+    margin: 0;
+    font-size: medium;
+    font-family: 'Ysabeau SC Thin';
+    font-size: 15px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-left: 30px;
+    margin-top: 9px;
+    width: 95%;
+    font-family: 'Ysabeau SC Thin';
+    font-weight: bold;
+    padding: 1px;
+}
+
+.input-box-image{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-left: 30px;
+    width: 95%;
+    font-family: 'Ysabeau SC Thin';
+    font-weight: bold;
+    padding: 1px;
+    align-items: center;
+    margin-top: 9px;
+}
+
+.image-label{
+    margin-right: 10px;
+}
+
+.image-description{ 
+    margin-left: 10px;
+    color: red;
+    font-family: 'Ysabeau SC Thin';
+    font-weight: bold;
+    font-size: 13px;
+
+}
+
+.input-box input, .input-box textarea, .input-box select {
+    height: 100%;
+    padding: 2px;
+    font-size: 14px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
