@@ -14,3 +14,14 @@
     font-size: 15px;
     cursor: pointer;
     }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #046668;
+        padding: 10px 20px;
+    }
+    .container {
+        display: flex;
+        justify-content: flex-end;
+    }
