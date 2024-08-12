@@ -7,7 +7,6 @@ html, body {
 }
 
 .flexbox-container {
-    /*criteria: content of the page: 1200px*/
     display: flex;
     flex-direction: column;
     width: 1200px;
@@ -21,7 +20,7 @@ html, body {
     padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures space between logo + select and search bar */
+    justify-content: space-between;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -199,7 +198,6 @@ html, body {
     height: 200px;
     display: flex;
     align-items: center;
-    background-color: red;
 }
 
 .pets-centre-bottom {
@@ -211,11 +209,12 @@ html, body {
 }
 
 .pets-description {
-margin: 0;
-font-size: medium;
+    margin: 0;
+    font-size: medium;
 }
 
 .pets-heading {
+    margin-top: 30px;
     font-size: large;
     font-family: 'PoetsenOne';
 }
