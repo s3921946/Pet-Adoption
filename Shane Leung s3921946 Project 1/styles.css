@@ -158,7 +158,12 @@ html, body {
 }
 
 .material-symbols-outlined {
-    gap: 10px;
+    font-size: 10px;
+    scale: 50%;
+}
+
+.material-symbols-outlined {
+    scale: 90%;
 }
 
 .navigation-search {
@@ -359,7 +364,7 @@ html, body {
     font-family: 'Ysabeau SC Thin';
     border: none;
     height: 30px;
-    width: 80px;
+    width: 90px;
     border-radius: 15px;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.20);
     font-weight: bold;
@@ -368,7 +373,7 @@ html, body {
     padding: 2px 5px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 0px;
 }
 
 .roundedbuttonv3:hover {
@@ -502,4 +507,3 @@ html, body {
     font-size: 13px;
     color: black;
 }
-
