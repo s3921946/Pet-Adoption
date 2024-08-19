@@ -3,7 +3,15 @@
 
 html, body {
     height: 100%;
-    margin: 0;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
 }
 
 .flexbox-container {
@@ -11,7 +19,6 @@ html, body {
     flex-direction: column;
     width: 1200px;
     max-width: 1;
-    
 }
 
 .flexbox-item-header {
