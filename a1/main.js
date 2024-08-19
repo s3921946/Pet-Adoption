@@ -1,16 +1,17 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM fully loaded and parsed');
-    const navigationSelect = document.getElementById('navigation-select');
+    
+    const navigationSelect = document.querySelector('#navigation-select');
 
     if (navigationSelect) {
-        navigationSelect.addEventListener('change', function () {
-            var url = this.value;
-            console.log('Selected URL:', url);
-            if (url !== "0") {
-                window.location.href = url;
+        navigationSelect.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+            console.log('Selected URL:', selectedValue);
+            if (selectedValue) {
+                window.location.assign(selectedValue);
             }
         });
     } else {
-        console.log('Navigation select element not found');
+        console.warn('Navigation select element not found');
     }
 });
