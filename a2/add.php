@@ -1,38 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0">
-    <title>ADD</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="main.js"></script>
-</head>
-
-<body>
-    <div class="flexbox-container">
-
-        <header class="flexbox-item-header">
-            <div class="header-container">
-                <img class="img-logo" src="../images/logo.png" alt="">
-                <div class="custom-select">
-                    <select id="navigation-select">
-                        <option value="">Select an Option:</option>
-                        <option value="index.html">index</option>
-                        <option value="add.html">add</option>
-                        <option value="gallery.html">gallery</option>
-                        <option value="pets.html">pets</option>
-                    </select>
-                </div>
-                <div class="navigation-search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search" name="Search">
-                        <span class="material-symbols-outlined">search</span>
-                    </form>
-                </div>
-            </div>
-        </header>
-
+<?php
+$title = "index";
+include 'includes/header.inc';
+include 'includes/nav.inc';
+include 'includes/db_connect.inc';
+?>
         <main class="flexbox-item-centre-1">
             <div class="flexbox-add add-centre-top">
                 <h1 class="add-center-heading">Add a pet</h1>
@@ -81,9 +52,6 @@
             </div>
         </main>
 
-        <footer class="flexbox-item-footer">
-            <p class="paragraph-copyright">© COPYRIGHT s3921946. All rights Reserved | Designed for Pets Victoria</p>
-        </footer>
-    </div>
-</body>
-</html>
+<?php
+include 'includes/footer.inc';
+?>
