@@ -4,10 +4,10 @@
                 <div class="custom-select">
                     <select id="navigation-select">
                         <option value="">Select an Option:</option>
-                        <option value="index.html">index</option>
-                        <option value="add.html">add</option>
-                        <option value="gallery.html">gallery</option>
-                        <option value="pets.html">pets</option>
+                        <option value="index.php">index</option>
+                        <option value="add.php">add</option>
+                        <option value="gallery.php">gallery</option>
+                        <option value="pets.php">pets</option>
                     </select>
                 </div>
                 <div class="navigation-search">
