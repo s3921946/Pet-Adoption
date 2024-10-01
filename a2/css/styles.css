@@ -1,5 +1,4 @@
 
-/*-------------- Styles for INDEX.HTML -------------- */
 
 html, body {
     height: 100%;
@@ -18,7 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 1200px;
-    max-width: 1;
 }
 
 .flexbox-item-header {
@@ -59,11 +57,10 @@ body {
 
 .paragraph-copyright {
     text-align: center;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-size: 15px;
     font-weight: bolder;
     color: #36454F ;
-    src: url(https://fonts.google.com/specimen/Ysabeau+SC);
     padding-top: 5px;
 }
 
@@ -76,21 +73,20 @@ body {
 }
 
 .heading-pets {
-    font-family: 'Permanent Marker';
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
     font-size: 65px;
     font-weight: bold;
-    color: #E57F3D; ;
-    src: url(https://fonts.google.com/specimen/Ysabeau+SC);
+    color: #E57F3D;
     margin-left: 30px;
     margin-top: 0px;
 }
 
 .heading-adoption {
-    font-family: 'PoetsenOne';
+    font-family: "Poetsen One", sans-serif;
     font-size: 50px;
     font-weight: bold;
     color: #008080 ;
-    src: url(https://fonts.google.com/specimen/Poetsen+One);
 
     margin-top: 0px;
     margin-bottom: 0px;
@@ -98,11 +94,10 @@ body {
 }
 
 .heading-adoption-1 {
-    font-family: 'PoetsenOne';
+    font-family: "Poetsen One", sans-serif;
     font-size: 60px;
     font-weight: bold;
     color: #008080 ;
-    src: url(https://fonts.google.com/specimen/Poetsen+One);
     margin-left: 40px;
 }
 
@@ -164,15 +159,6 @@ body {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.material-symbols-outlined {
-    font-size: 10px;
-    scale: 50%;
-}
-
-.material-symbols-outlined {
-    scale: 90%;
-}
-
 .navigation-search {
     display: flex;
     align-items: center;
@@ -227,15 +213,15 @@ body {
 
 .pets-description {
     margin: 0;
-    font-size: medium;
-    font-family: 'Ysabeau SC Thin';
+    font-size: small;
+    font-family: "Ysabeau SC", sans-serif;
 }
 
 .pets-heading {
     margin-top: 40px;
     font-size: large;
     font-weight: lighter;
-    font-family: 'PoetsenOne';
+    font-family: "Poetsen One", sans-serif;
 }
 
 .pets-center-image{
@@ -249,9 +235,9 @@ body {
     margin-left: 60px;
     font-size: 1em;
     width: 500px;
-    height: 200px;
+    height: 1px;
     border: 1px solid black;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
 }
 
 
@@ -282,7 +268,7 @@ body {
     width: 100%;
     height: 70px;
     align-items: center;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-weight: bolder;
     font-size: 12px;
 }
@@ -305,14 +291,14 @@ body {
     margin-top: 10px;
     font-size: large;
     font-weight: lighter;
-    font-family: 'PoetsenOne';
+    font-family: "Poetsen One", sans-serif;
 }
 
 
 .add-center-description {
     margin: 0;
     font-size: medium;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-size: 15px;
 }
 
@@ -323,7 +309,7 @@ body {
     margin-left: 30px;
     margin-top: 9px;
     width: 95%;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-weight: bold;
     padding: 1px;
 }
@@ -334,7 +320,7 @@ body {
     box-sizing: border-box;
     margin-left: 30px;
     width: 95%;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-weight: bold;
     padding: 1px;
     align-items: center;
@@ -348,7 +334,7 @@ body {
 .image-description{ 
     margin-left: 10px;
     color: red;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-weight: bold;
     font-size: 13px;
 
@@ -368,7 +354,7 @@ body {
 .roundedbuttonv3{
     background-color: #008080;
     color: white;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     border: none;
     height: 30px;
     width: 90px;
@@ -402,28 +388,29 @@ body {
 }
 
 .gallery-centre-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 220px;
+    gap: 20px;
     width: 80%;
-    height: 450px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     margin: 0 auto;
+    justify-items: center;
+    align-items: center;
 }
+
 
 .gallery-center-heading {
     margin-top: 10px;
     font-size: large;
     font-weight: lighter;
-    font-family: 'PoetsenOne';
+    font-family: "Poetsen One", sans-serif;
 }
 
 
 .gallery-center-description {
     margin: 0;
     font-size: medium;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-size: 15px;
 }
 
@@ -488,7 +475,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease-in-out;
-    font-family: 'Ysabeau SC Thin';
+    font-family: "Ysabeau SC", sans-serif;
     font-size: 12px;
     font-weight: bolder;
     cursor: pointer;
@@ -502,7 +489,7 @@ body {
     height: 50px;
     width: 100%;
     background-color: white;
-    font-family: 'PoetsenOne';
+    font-family: "Poetsen One", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -513,4 +500,71 @@ body {
     margin: 0;
     font-size: 13px;
     color: black;
+}
+
+/*-------------- Styles for details.php -------------- */
+
+.detailscontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 25px;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 200px;
+}
+
+.image {
+    width: 350px;
+}
+
+.details {
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center; 
+    
+}
+
+.details span, p {
+    margin: 0;
+    padding: 5px;
+}
+
+.details span {
+    color: black;
+    font-size: 30px;
+}
+
+.details p {
+    font-family: "Ysabeau SC", sans-serif;
+}
+
+#location span {
+    color:#008080 
+}
+
+.Description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.Description p {
+    font-size: 12px;
+    font-family: "Ysabeau SC", sans-serif;
+}
+
+.Description h1 {
+    font-size: 20px;
+    font-family: "Ysabeau SC", sans-serif;
 }
