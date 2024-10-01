@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 $title = "index";
 include 'includes/header.inc';
@@ -12,7 +14,6 @@ include 'includes/db_connect.inc';
         <h3 class="gallery-center-description">difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all</h3>
         <h4 class="gallery-center-description">still have big, hairy work to do.</h4>
     </div>
-
     <div class="flexbox-pets gallery-centre-bottom">
         <?php 
         $sql = "SELECT petid, petname, image FROM pets";
@@ -23,19 +24,24 @@ include 'includes/db_connect.inc';
                 $petname = htmlspecialchars($row['petname']);
                 $petId = $row['petid'];
                 $image = htmlspecialchars($row['image']);
-        
+            
                 echo <<<HTML
-                <div class="gallery-pets">
-                    <div class="pets-top">
-                        <img class="gallery-pet-option" src="$image" alt="$petname">
-                        <div class="gallery-pets-hover"><span class="material-symbols-outlined" style="color:black;font-weight:bold">search</span>Discover More!</div>
+                <a href="details.php?id=$petId" style="text-decoration: none; color: inherit;">
+                    <div class="gallery-pets">
+                        <div class="pets-top">
+                            <img class="gallery-pet-option" src="images/$image" alt="$petname">
+                            <div class="gallery-pets-hover">
+                                <span class="material-symbols-outlined" style="color:black;font-weight:bold">search</span>Discover More!
+                            </div>
+                        </div>
+                        <div class="pets-bottom">
+                            <p>$petname</p>
+                        </div>
                     </div>
-                    <div class="pets-bottom">
-                        <p>$petname</p>
-                    </div>
-                </div>
+                </a>
                 HTML;
             }
+            
         } else {
             echo "<p>No pets found.</p>";
         }
