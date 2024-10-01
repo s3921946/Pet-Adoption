@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 $title = "index";
 include 'includes/header.inc';
@@ -16,8 +18,6 @@ include 'includes/db_connect.inc';
                 </div>
             </div>
         </main>
-    </div>
-</body>
 <?php
 include 'includes/footer.inc';
 ?>
