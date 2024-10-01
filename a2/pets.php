@@ -1,9 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 $title = "index";
 include 'includes/header.inc';
 include 'includes/nav.inc';
 include 'includes/db_connect.inc';
 ?>
+
+        <!-- Replace flexbox-item-centre-1 with main -->
         <main class="flexbox-item-centre-1">
             <div class="flexbox-pets pets-centre-top">
                 <h1 class="pets-heading">Discover Pets Victoria</h1>
@@ -15,7 +19,7 @@ include 'includes/db_connect.inc';
                 <h5 class="pets-description">education, and community support programs, all aimed at promoting responsible pet ownership and reducing the number of homeless animals.</h5>
             </div>
             <div class="flexbox-pets pets-centre-bottom">
-                <img class="pets-center-image" src="images/pets.jpeg" alt="Pets Image">
+                <img class="pets-center-image" src="../images/pets.jpeg" alt="Pets Image">
                 <table class="pets-content-table">
                     <thead>
                         <tr>
@@ -27,47 +31,29 @@ include 'includes/db_connect.inc';
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Milo</th>
-                            <th>Cat</th>
-                            <th>3 Months</th>
-                            <th>Melbourne CBD</th>
-                        </tr>
-                        <tr>
-                            <th>Baxter</th>
-                            <th>Dog</th>
-                            <th>5 Months</th>
-                            <th>Cape Woolamai</th>
-                        </tr>
-                        <tr>
-                            <th>Luna</th>
-                            <th>Cat</th>
-                            <th>1 Month</th>
-                            <th>Ferntree Gully</th>
-                        </tr>
-                        <tr>
-                            <th>Willow</th>
-                            <th>Dog</th>
-                            <th>48 Months</th>
-                            <th>Marysville</th>
-                        </tr>
-                        <tr>
-                            <th>Oliver</th>
-                            <th>Cat</th>
-                            <th>12 Months</th>
-                            <th>Grampians</th>
-                        </tr>
-                        <tr>
-                            <th>Bella</th>
-                            <th>Dog</th>
-                            <th>10 Months</th>
-                            <th>Carlton</th>
+                            <?php
+                            $sql = "SELECT petid, petname, type, age, location FROM pets";
+                            $result = mysqli_query($conn, $sql);
+                            
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_array($result)) {
+                                    echo "<tr>";
+                                    echo "<td><a href=details.php?id={$row['petid']}>".$row["petname"];
+                                    echo "<td>".$row["type"];
+                                    echo "<td>".$row["age"];
+                                    echo "<td>".$row["location"];
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "No pets found";
+                            }
+                            $conn-> close();
+                            ?>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </main>
-
-        <?php
-        include 'includes/footer.inc';
-        ?>
-</html>
+<?php
+include 'includes/footer.inc';
+?>
