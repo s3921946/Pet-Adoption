@@ -1,6 +1,9 @@
+<body>
+    <div class="flexbox-container">
+
         <header class="flexbox-item-header">
             <div class="header-container">
-                <img class="img-logo" src="../images/logo.png" alt="">
+                <img class="img-logo" src="images/logo.png" alt="">
                 <div class="custom-select">
                     <select id="navigation-select">
                         <option value="">Select an Option:</option>
