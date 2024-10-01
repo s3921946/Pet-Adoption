@@ -21,4 +21,3 @@ include 'includes/db_connect.inc';
 <?php
 include 'includes/footer.inc';
 ?>
-</html>
