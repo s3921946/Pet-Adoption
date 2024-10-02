@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 $title = "Pet Details";
 include 'includes/header.inc';

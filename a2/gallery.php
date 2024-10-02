@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 $title = "index";
 include 'includes/header.inc';

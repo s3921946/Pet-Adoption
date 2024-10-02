@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
     include 'includes/header.inc';
     include 'includes/nav.inc';
@@ -63,4 +61,5 @@
 </main>
 
 <?php
-include 'includes/footer.inc';?>
+include 'includes/footer.inc';
+?>
