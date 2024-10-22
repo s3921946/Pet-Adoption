@@ -55,3 +55,15 @@ nav {
 .card:hover {
   box-shadow: 0 0 15px 5px #e57f3d;
 }
+
+.nav-item {
+    transition: all 0.4s;
+}
+
+.nav-item :hover {
+    border-bottom: 2px solid #e57f3d;
+}
+
+.nav-item :after{
+    opacity: 70%;
+}
