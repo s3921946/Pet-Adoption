@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en"></html>
+>>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=1200, initial-scale=1.0">

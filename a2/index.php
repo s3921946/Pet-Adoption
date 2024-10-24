@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
+=======
+>>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
 <?php
 $title = "index";
 include 'includes/header.inc';

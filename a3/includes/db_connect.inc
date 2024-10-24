@@ -23,5 +23,4 @@ function pre($var) {
     print_r($var);
     echo "</pre>";
 }
-
 ?>
