@@ -1,89 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0">
-    <title>ADD</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="main.js"></script>
-</head>
+<?php
+    include 'includes/header.inc';
+    include 'includes/nav.inc';
+    include 'includes/db_connect.inc';
+    ?>
+<main class="flexbox-item-centre-1">
+    <section class="flexbox-add add-centre-top">
+        <h1 class="add-center-heading">Add a pet</h1>
+        <p class="add center-description">YOU CAN ADD A NEW PET HERE</p>
+    </section>
 
-<body>
-    <div class="flexbox-container">
-
-        <header class="flexbox-item-header">
-            <div class="header-container">
-                <img class="img-logo" src="../images/logo.png" alt="">
-                <div class="custom-select">
-                    <select id="navigation-select">
-                        <option value="">Select an Option:</option>
-                        <option value="index.html">index</option>
-                        <option value="add.html">add</option>
-                        <option value="gallery.html">gallery</option>
-                        <option value="pets.html">pets</option>
-                    </select>
-                </div>
-                <div class="navigation-search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search" name="Search">
-                        <span class="material-symbols-outlined">search</span>
-                    </form>
-                </div>
+    <div class="flexbox-add add-centre-middle">
+        
+        <form method="POST" action="add-process.php" enctype="multipart/form-data">
+            <div class="input-box">
+                <label for="petname">Pet Name: <span style="color:red;font-weight:bold">*</span></label>
+                <input type="text" name="petname" placeholder="Provide a name for the pet" id="petname" required>
             </div>
-        </header>
 
-        <main class="flexbox-item-centre-1">
-            <div class="flexbox-add add-centre-top">
-                <h1 class="add-center-heading">Add a pet</h1>
-                <p class="add center-description">YOU CAN ADD A NEW PET HERE</p>
+            <div class="input-box">
+                <label for="pet-type">Type: <span style="color:red;font-weight:bold">*</span></label>
+                <select id="pet-type" name="pet-type" required>
+                    <option value="" disabled selected>Choose an option</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                </select>
             </div>
-            <div class="flexbox-add add-centre-middle">
-                <form action="#">
-                    <div class="input-box">
-                        <label for="petname">Pet Name: <span style="color:red;font-weight:bold">*</span></label>
-                        <input type="text" placeholder="Provide a name for the pet" id="petname">
-                    </div>
-                    <div class="input-box">
-                        <label for="pet-type">Type: <span style="color:red;font-weight:bold">*</span></label>
-                        <select id="pet-type" name="pet-type">
-                            <option value="" disabled selected>Choose an option</option>
-                            <option value="dog">Dog</option>
-                            <option value="cat">Cat</option>
-                        </select>
-                    </div>
-                    <div class="input-box">
-                        <label for="description">Description: <span style="color:red;font-weight:bold">*</span></label>
-                        <textarea name="Description" id="description" rows="3" cols="50" placeholder="Describe the pet briefly"></textarea>
-                    </div>
-                    <div class="input-box-image">
-                        <label for="image-lab" class="image-label">Select an Image:<span style="color:red;font-weight:bold">*</span></label>
-                        <input type="file" placeholder="" id="image-lab">
-                        <label class="image-description">max image size 500px</label>
-                    </div>
-                    <div class="input-box">
-                        <label for="image-cap">Image Caption: <span style="color:red;font-weight:bold">*</span></label>
-                        <input type="text" placeholder="describe the image in one word" id="image-cap">
-                    </div>
-                    <div class="input-box">
-                        <label for="age-months">Age (MONTHS): <span style="color:red;font-weight:bold">*</span></label>
-                        <input type="text" placeholder="Age of a pet in months" id="age-months">
-                    </div>
-                    <div class="input-box">
-                        <label for="location">Location: <span style="color:red;font-weight:bold">*</span></label>
-                        <input type="text" placeholder="location of the pet" id="location">
-                    </div>
-                    <div class="flexbox-add add-centre-bottom">
-                        <button class="roundedbuttonv3 button-margin"><span class="material-symbols-outlined">check_circle</span>submit</button>
-                        <button class="roundedbuttonv3 button-margin"><span class="material-symbols-outlined">close</span>clear</button>
-                    </div>
-                </form>
-            </div>
-        </main>
 
-        <footer class="flexbox-item-footer">
-            <p class="paragraph-copyright">© COPYRIGHT s3921946. All rights Reserved | Designed for Pets Victoria</p>
-        </footer>
+            <div class="input-box">
+                <label for="description">Description: <span style="color:red;font-weight:bold">*</span></label>
+                <textarea name="description" id="description" rows="3" cols="50" placeholder="Describe the pet briefly" required></textarea>
+            </div>
+
+            <div class="input-box-image">
+                <label for="image-lab" class="image-label">Select an Image:<span style="color:red;font-weight:bold">*</span></label>
+                <input type="file" name="pet-image" id="image-lab" required>
+                <label class="image-description">max image size 500px</label>
+            </div>
+
+            <div class="input-box">
+                <label for="image-cap">Image Caption: <span style="color:red;font-weight:bold">*</span></label>
+                <input type="text" name="image-cap" placeholder="Describe the image in one word" id="image-cap" required>
+            </div>
+
+            <div class="input-box">
+                <label for="age-months">Age (MONTHS): <span style="color:red;font-weight:bold">*</span></label>
+                <input type="number" name="age-months" placeholder="Age of a pet in months" id="age-months" required>
+            </div>
+
+            <div class="input-box">
+                <label for="location">Location: <span style="color:red;font-weight:bold">*</span></label>
+                <input type="text" name="location" placeholder="Location of the pet" id="location" required>
+            </div>
+
+            <div class="flexbox-add add-centre-bottom">
+                <button class="roundedbuttonv3 button-margin" type="submit"><span class="material-symbols-outlined">check_circle</span>Submit</button>
+                <button class="roundedbuttonv3 button-margin" type="reset"><span class="material-symbols-outlined">close</span>Clear</button>
+            </div>
+        </form>
     </div>
-</body>
-</html>
+</main>
+
+<?php
+include 'includes/footer.inc';?>

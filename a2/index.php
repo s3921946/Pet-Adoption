@@ -1,42 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- 2.	All pages should use semantic HTML 5 elements  -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1200, initial-scale=1.0">
-    <title>INDEX</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="main.js"></script>
-</head>
-
-<body>
-    <div class="flexbox-container">
-        <!-- Replace flexbox-item-header with header -->
-        <header class="flexbox-item-header">
-            <div class="header-container">
-                <!-- 3.	Include the logo (logo.jpeg) -->
-                <img class="img-logo" src="../images/logo.png" alt="Logo">
-                <div class="custom-select">
-                    <select id="navigation-select">
-                        <!-- 3. Navigation bar and link it to the home page (index.html). -->
-                        <option value="">Select an Option:</option>
-                        <option value="index.html">index</option>
-                        <option value="add.html">add</option>
-                        <option value="gallery.html">gallery</option>
-                        <option value="pets.html">pets</option>
-                    </select>
-                </div>
-                <div class="navigation-search">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search" name="Search">
-                        <span class="material-symbols-outlined">search</span>
-                    </form>
-                </div>
-            </div>
-        </header>
-
-        <!-- Replace flexbox-item-centre with main -->
+<?php
+$title = "index";
+include 'includes/header.inc';
+include 'includes/nav.inc';
+include 'includes/db_connect.inc';
+?>  
         <main class="flexbox-item-centre">
             <div class="centre-container">
                 <div class="centre-container centre-container-left">
@@ -45,15 +14,10 @@
                     <p class="heading-adoption">ADOPTION</p>
                 </div>
                 <div class="centre-container centre-container-right">
-                    <img class="center-container-image" src="../images/main.jpg" alt="Main Image">
+                    <img class="center-container-image" src="images/main.jpg" alt="Main Image">
                 </div>
             </div>
         </main>
-
-        <!-- Replace flexbox-item-footer with footer -->
-        <footer class="flexbox-item-footer">
-            <p class="paragraph-copyright">© COPYRIGHT s3921946. All rights Reserved | Designed for Pets Victoria</p>
-        </footer>
-    </div>
-</body>
-</html>
+<?php
+include 'includes/footer.inc';
+?>
