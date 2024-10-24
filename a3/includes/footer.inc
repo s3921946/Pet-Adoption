@@ -25,7 +25,7 @@
         <p>© Copyright s3921946. All Rights Reserved | Designed For Pets Victoria</p>
     </div>
 </footer>
-<script src="main1.js"></script>
+<script src="js/main1.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
