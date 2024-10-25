@@ -8,7 +8,7 @@
         } else {
             $servername = "talsprddb02.int.its.rmit.edu.au";
             $username = "s3921946";
-            $password = "Rmit1234!";
+            $password = "Chicken120998!";
             $dbname = "s3921946";
             $imagePath = "/home/sl6/S3921946/public_html/wp/a3/images"; 
         }
