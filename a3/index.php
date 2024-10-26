@@ -22,7 +22,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
     <div class="col-12 col-md-6">
       <div id="carouselExampleIndicators" class="carousel slide" style="max-width: 60%; margin: 0 auto;">
         <?php
-            $sql = "SELECT * FROM Pets ORDER BY petid DESC LIMIT 4";
+            $sql = "SELECT * FROM pets ORDER BY petid DESC LIMIT 4";
             $stmt = $conn->prepare($sql);
             $result = mysqli_query($conn, $sql);
 
