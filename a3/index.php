@@ -1,3 +1,4 @@
+<title>INDEX</title>
 <?php 
 session_start();
 include 'includes/header.inc';
@@ -5,13 +6,13 @@ include 'includes/nav.inc';
 include 'includes/db_connect.inc';
 
 if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
-    echo '<div class="alert alert-warning alert-dismissible fade show text-white d-flex justify-content-between align-items-center" style="margin: 0 auto; background-color: #00c04b;" role="alert"> 
-    <span>Login Successful!</span>
-    <button type="button" class="close text-white" data-bs-dismiss="alert" style="background-color: #00c04b; border: none;" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    </div>';
-    $_SESSION['login_success'] = false;
+  echo '<div class="alert alert-warning alert-dismissible fade show text-white d-flex justify-content-between align-items-center" style="margin: 0 auto; background-color: #00c04b;" role="alert"> 
+  <span>Login Successful!</span>
+  <button type="button" class="close text-white" data-bs-dismiss="alert" style="background-color: #00c04b; border: none;" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>';
+  $_SESSION['login_success'] = false;
 }
 
 ?>
@@ -21,31 +22,30 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
     <div class="col-12 col-md-6">
       <div id="carouselExampleIndicators" class="carousel slide" style="max-width: 60%; margin: 0 auto;">
         <?php
-        
-            $sql = "SELECT petname, image, petid FROM Pets ORDER BY petid DESC LIMIT 4";
-            $result = mysqli_query($conn, $sql);
+            $sql = "SELECT * FROM Pets ORDER BY petid DESC LIMIT 4";
+            $stmt = $conn->prepare($sql);
+            $result = $stmt->get_result();
 
-            if (mysqli_num_rows($result) > 0) {
+            if ($result->num_rows > 0) {
                 echo '<div class="carousel-indicators">';
-                for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+                for ($i = 0; $i < $result->num_rows; $i++) {
                     $activeClass = ($i == 0) ? 'active' : '';
                     echo '<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="' . $i . '" class="' . $activeClass . '" aria-current="true" aria-label="Slide ' . ($i + 1) . '"></button>';
                 }
                 echo '</div>';
-
                 echo '<div class="carousel-inner">';
                 $active = true;
-                while ($row = mysqli_fetch_assoc($result)) {
+                while ($row = $result->fetch_assoc()) {
                     $petid = $row['petid'];
                     $petname = htmlspecialchars($row['petname']);
                     $image = htmlspecialchars($row['image']);
 
                     $activeClass = $active ? 'active' : '';
-                    $active = false;
+                    $active = false; 
 
                     echo <<<HTML
                       <div class="carousel-item $activeClass">
-                        <img src="images/$image" class="special-card d-block w-100 img-fluid" alt="$petname" style="max-height: 500px; max-width: 500px; object-fit: cover;">
+                        <img src="images/$image" class="special-card d-block w-100 img-fluid" alt="$petname" style="max-height 500px; max-width: 500px; object-fit: cover;">
                       </div>
                     HTML;
                 }
