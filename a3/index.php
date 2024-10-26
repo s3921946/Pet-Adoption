@@ -25,10 +25,9 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
             $sql = "SELECT * FROM Pets ORDER BY petid DESC LIMIT 4";
 
             $stmt = $conn->prepare($sql);
-            // $stmt->execute();
-            // $result = $stmt->get_result();
+            $result = mysqli_query($conn, $sql);
 
-            if ($result->num_rows > 0) {
+            if (mysqli_num_rows($result) > 0) {
                 echo '<div class="carousel-indicators">';
                 for ($i = 0; $i < $result->num_rows; $i++) {
                     $activeClass = ($i == 0) ? 'active' : '';
