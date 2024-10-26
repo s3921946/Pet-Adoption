@@ -36,7 +36,7 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
                 echo '</div>';
                 echo '<div class="carousel-inner">';
                 $active = true;
-                while ($row = $result->fetch_assoc()) {
+                while ($row = mysqli_fetch_assoc($result)){
                     $petid = $row['petid'];
                     $petname = htmlspecialchars($row['petname']);
                     $image = htmlspecialchars($row['image']);
