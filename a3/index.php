@@ -25,8 +25,8 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
             $sql = "SELECT * FROM Pets ORDER BY petid DESC LIMIT 4";
 
             $stmt = $conn->prepare($sql);
-            $stmt->execute();
-            $result = $stmt->get_result();
+            // $stmt->execute();
+            // $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
                 echo '<div class="carousel-indicators">';
