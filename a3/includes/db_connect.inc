@@ -8,7 +8,7 @@
         } else {
             $servername = "talsprddb02.int.its.rmit.edu.au";
             $username = "s3921946";
-            $password = "Rmit1234!";
+            $password = "Chicken1209988!";
             $dbname = "s3921946";
             $imagePath = "/home/sl6/S3921946/public_html/wp/a3/images"; 
         }
@@ -17,10 +17,4 @@
         
         if ($conn->connect_error)  
             die("Connection failed: " . $conn->connect_error);
-        
-function pre($var) {
-    echo "<pre>";
-    print_r($var);
-    echo "</pre>";
-}
 ?>
