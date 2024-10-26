@@ -24,14 +24,6 @@ if (isset($_SESSION['login_success']) && $_SESSION['login_success'] === true) {
         <?php
             $sql = "SELECT * FROM Pets ORDER BY petid DESC LIMIT 4";
 
-            if ($stmt === false) {
-              die("Error preparing statement: " . $conn->error);
-            }
-
-            if (!$stmt->execute()) {
-              die("Error executing statement: " . $stmt->error);
-            }
-            
             $stmt = $conn->prepare($sql);
             $stmt->execute();
             $result = $stmt->get_result();
