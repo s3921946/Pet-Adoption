@@ -29,7 +29,7 @@ if (!empty($_GET['user'])) {
                 $age = htmlspecialchars($row['age']);
                 $type = htmlspecialchars($row['type']);
                 $location = htmlspecialchars($row['location']);
-                $caption = htmlspecialchars($row['caption']);
+                $description = htmlspecialchars($row['description']);
 
                 echo <<<HTML
                 <main class="container-fluid p-5">
@@ -53,7 +53,7 @@ if (!empty($_GET['user'])) {
                         </div>
                         <div class="col justify-content-center">
                             <h2>{$petname}</h2>
-                            <p>{$caption}</p>
+                            <p>{$description}</p>
                         </div>
                     </div>
                 </main>
