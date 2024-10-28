@@ -19,11 +19,13 @@ if (!empty($_GET['id'])) {
 ?>
 <main class="container-fluid p-5">
     <h2>Edit Pet Information</h2>
+    <?phpif ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();?>
     <form method="POST" action="edit-process.php" enctype="multipart/form-data">
         <input type="hidden" name="petid" value="<?=$row['petid']?>">
         <div class="form-group">
             <label for="petname">Pet Name</label>
-            <input type="text" id="petname" name="petname" class="form-control" value="{petname}" required>
+            <input type="text" id="petname" name="petname" class="form-control" value="<?php{petname}?>" required>
         </div>
 
         <div class="form-group">
@@ -55,5 +57,6 @@ if (!empty($_GET['id'])) {
             <button type="submit" class="btn btn-primary mt-3" style="background-color: #0c8080;">Update Pet</button>
         </div>
     </form>
+    <?php } ?>
 </main>
 <?php include 'includes/footer.inc'; ?>
