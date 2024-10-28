@@ -30,7 +30,6 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
       $_POST['petid']);
       $stmt->execute();
     }
-    print_r($stmt->error);
 include 'includes/footer.inc';
 
 ?>
