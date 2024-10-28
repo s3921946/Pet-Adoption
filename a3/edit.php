@@ -61,22 +61,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="POST" action="">
         <div class="form-group">
             <label for="petname">Pet Name</label>
-            <input type="text" name="petname" class="form-control" value="<?php echo htmlspecialchars($pet['petname']); ?>" required>
+            <input type="text" id="petname" name="petname" class="form-control" value="<?php echo htmlspecialchars($pet['petname']); ?>" required>
         </div>
 
         <div class="form-group">
             <label for="age">Age (in months)</label>
-            <input type="number" name="age" class="form-control" value="<?php echo htmlspecialchars($pet['age']); ?>" required>
+            <input type="number" id="age" name="age" class="form-control" value="<?php echo htmlspecialchars($pet['age']); ?>" required>
         </div>
 
         <div class="form-group">
             <label for="type">Type</label>
-            <input type="text" name="type" class="form-control" value="<?php echo htmlspecialchars($pet['type']); ?>" required>
+            <input type="text" id="type" name="type" class="form-control" value="<?php echo htmlspecialchars($pet['type']); ?>" required>
         </div>
 
         <div class="form-group">
             <label for="location">Location</label>
-            <input type="text" name="location" class="form-control" value="<?php echo htmlspecialchars($pet['location']); ?>" required>
+            <input type="text" id="location" name="location" class="form-control" value="<?php echo htmlspecialchars($pet['location']); ?>" required>
         </div>
 
         <div class="form-group">
