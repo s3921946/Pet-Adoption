@@ -34,43 +34,43 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 }
 
 ?>
-    <main class="container-fluid p-5">
-        <div class="row">
-          <div class="col">
-              <img class="image" style="max-width: 100%; margin: 0 auto;" src="images/<?php echo $image; ?>" alt="<?php echo $petname; ?>">
-              <div class="d-flex rows justify-content-start gap-5 text-center">
-                  <div class="p-5" id="months">
-                      <span class="material-symbols-outlined">alarm</span>
-                      <p><?php 
-                        if($age == 1) {
-                            echo $age." Month";
-                        } else {
-                            echo $age." Months";
-                        } ?></p>
-                    </div>
-                  <div class="p-5" id="type">
-                      <span class="material-symbols-outlined">pets</span>
-                      <p><?php echo $type; ?></p>
-                    </div>
-                  <div class="p-5" id="location">
-                      <span class="material-symbols-outlined">location_on</span>
-                      <p><?php echo $location; ?></p>
-                    </div>
+<main class="container-fluid p-5">
+    <div class="row">
+      <div class="col col-sm-12 col-md-12 col-lg-6">
+          <img class="image" style="width: 100%; height: auto; max-width: 600px; display: block; margin: 0 auto;" src="images/<?php echo $image; ?>" alt="<?php echo $petname; ?>">
+          <div class="d-flex rows justify-content-start gap-5 text-center">
+              <div class="p-5" id="months">
+                  <span class="material-symbols-outlined">alarm</span>
+                  <p><?php 
+                    if($age == 1) {
+                        echo $age." Month";
+                    } else {
+                        echo $age." Months";
+                    } ?></p>
                 </div>
-                <?php if (!empty($_SESSION['username'])) {?>
-                <div class="d-flex gap-3 p-1 mb-2">
-                  <a href="edit.php?id=<?php echo $petId; ?>" class="btn btn-primary">Edit</a>
-                  <a href="delete.php?id=<?php echo $petId; ?>" class="btn btn-secondary" onclick="return confirmDeletion();">Delete</a>
-              </div>
-              <?php
-              }?>
+              <div class="p-5" id="type">
+                  <span class="material-symbols-outlined">pets</span>
+                  <p><?php echo $type; ?></p>
+                </div>
+              <div class="p-5" id="location">
+                  <span class="material-symbols-outlined">location_on</span>
+                  <p><?php echo $location; ?></p>
+                </div>
+            </div>
+            <?php if (!empty($_SESSION['username'])) { ?>
+            <div class="d-flex gap-3 p-1 mb-2">
+              <a href="edit.php?id=<?php echo $petId; ?>" class="btn btn-primary">Edit</a>
+              <a href="delete.php?id=<?php echo $petId; ?>" class="btn btn-secondary" onclick="return confirmDeletion();">Delete</a>
           </div>
-          <div class="col justify-content-center"> 
-              <h2><?php echo $petname; ?></h2>
-              <p><?php echo $description; ?></p>
-          </div>
-        </div>
-      </main>
+          <?php } ?>
+      </div>
+      <div class="col col-sm-12 col-md-12 col-lg-6 justify-content-center"> 
+          <h2><?php echo $petname; ?></h2>
+          <p><?php echo $description; ?></p>
+      </div>
+    </div>
+</main>
+
 <?php 
 include 'includes/footer.inc'; 
 ?>
