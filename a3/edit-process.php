@@ -23,7 +23,7 @@ if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
 }
 
 if ($error == 0) {
-    $sql = "UPDATE pets SET petname = ?, type = ?, description = ?, image = ?, location = ? WHERE petid = ?";
+    $sql = "UPDATE pets SET petname = ?, type = ?, description = ?, image = ?, location = ?, caption = ?, age = ? WHERE petid = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
       "sssssisi",
@@ -31,9 +31,9 @@ if ($error == 0) {
       $_POST['type'], 
       $_POST['description'], 
       $_FILES['image']['name'], 
+      $_POST['location'],
       $_POST['caption'],
       $_POST['age'],
-      $_POST['location'],
       $_POST['petid']);
 
     $stmt->execute();
