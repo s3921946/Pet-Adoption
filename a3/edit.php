@@ -5,6 +5,7 @@ include 'includes/header.inc';
 include 'includes/nav.inc'; 
 
 $query = "SELECT * FROM pets WHERE petid = ?";
+$result = mysqli_query($conn, $sql);
 
 if (!empty($_GET['id'])) {
     $stmt = $conn->prepare($query);
