@@ -38,6 +38,7 @@ include 'includes/db_connect.inc';
                 $petId = $row['petid'];
                 $image = htmlspecialchars($row['image']);
                 $type = htmlspecialchars($row['type']);
+                $caption = htmlspecialchars($row['caption']);
 
                 echo <<<HTML
                     <div class="col-md-4 col-sm-6 mb-3" data-category="$type">
@@ -46,7 +47,7 @@ include 'includes/db_connect.inc';
                                 <img src="images/$image" class="card-img-top" alt="$petname">
                                 <div class="card-body">
                                     <h5 class="card-title">$petname</h5>
-                                    <p class="card-text">$description</p>
+                                    <p class="card-text">$caption</p>
                                 </div>
                             </div>
                         </a>
