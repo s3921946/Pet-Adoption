@@ -58,6 +58,15 @@ if (!empty($_GET['user'])) {
                     </div>
                 </main>
                 HTML;
+
+                if (!empty($_SESSION['username'])) {
+                    echo <<<HTML
+                    <div class="d-flex gap-3 p-1 mb-2 ml-5">
+                      <a href="edit.php?id={$petId}" class="btn btn-primary">Edit</a>
+                      <a href="delete.php?id={$petId}" class="btn btn-secondary" onclick="return confirmDeletion();">Delete</a>
+                    </div>
+                    HTML;
+                }
             }
         } else {
             echo "<p>No pets found for this user.</p>";
