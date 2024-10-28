@@ -8,7 +8,7 @@
                 echo '<div class="d-flex justify-content-center gap-3 flex-wrap">';
                 while ($row = $result->fetch_assoc()) {
                     $username = htmlspecialchars($row['username']);
-                    echo "<a href='record.php?user={$username}'>{$username}</a>";
+                    echo "<a href='user.php?user={$username}'>{$username}</a>";
                 }
                 echo '</div>';
             } else {
