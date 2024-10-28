@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <main class="container-fluid p-5">
     <h2>Edit Pet Information</h2>
-    <form method="POST" action="">
+    <form method="POST">
         <div class="form-group">
             <label for="petname">Pet Name</label>
             <input type="text" id="petname" name="petname" class="form-control" value="<?php echo htmlspecialchars($pet['petname']); ?>" required>
@@ -81,7 +81,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="form-group">
             <label for="caption">Caption</label>
-            <textarea name="caption" class="form-control" required><?php echo htmlspecialchars($pet['caption']); ?></textarea>
+            <textarea name="caption" id="caption" class="form-control" required><?php echo htmlspecialchars($pet['caption']); ?></textarea>
         </div>
 
         <div class="text-end">
