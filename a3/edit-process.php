@@ -16,7 +16,7 @@ $temp = $_FILES['image']['tmp_name'];
 $error = $_FILES['image']['error'];
 
 
-if (isset($_FILES['pet-image']) && $_FILES['pet-image']['error'] == 0) {
+if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
     echo "File uploaded successfully!";
 
 } else {
@@ -41,7 +41,7 @@ if ($error == 0) {
 
     if ($stmt->affected_rows > 0) {
         echo "<p>Pets was added to the database.</p>";
-             if (move_uploaded_file($_FILES['pet-image']['tmp_name'], $imagePath . "/" . $_FILES['pet-image']['name'])) {
+             if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath . "/" . $_FILES['image']['name'])) {
                 echo "<p>File was added to the images directory.</p>";
                 } else {
                     echo "<p>File was NOT added to the images directory.</p>";
