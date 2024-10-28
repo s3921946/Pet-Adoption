@@ -82,6 +82,3 @@ if (!empty($_GET['user'])) {
 
 include 'includes/footer.inc';
 ?>
-
-</body>
-</html>
