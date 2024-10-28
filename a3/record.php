@@ -32,20 +32,20 @@ if (!empty($_GET['user'])) {
                 $description = htmlspecialchars($row['description']);
 
                 echo <<<HTML
-                <main class="container-fluid p-5">
+                <div class="container-fluid p-5">
                     <div class="row">
                         <div class="col">
                             <img class="image" style="max-width: 100%; margin: 0 auto;" src="images/{$image}" alt="{$petname}">
                             <div class="d-flex rows justify-content-start gap-5 text-center">
-                                <div class="p-5" id="months">
+                                <div class="p-5">
                                     <span class="material-symbols-outlined">alarm</span>
                                     <p>{$age} Month(s)</p>
                                 </div>
-                                <div class="p-5" id="type">
+                                <div class="p-5">
                                     <span class="material-symbols-outlined">pets</span>
                                     <p>{$type}</p>
                                 </div>
-                                <div class="p-5" id="location">
+                                <div class="p-5">
                                     <span class="material-symbols-outlined">location_on</span>
                                     <p>{$location}</p>
                                 </div>
@@ -56,7 +56,7 @@ if (!empty($_GET['user'])) {
                             <p>{$description}</p>
                         </div>
                     </div>
-                </main>
+                </div>
                 HTML;
 
                 if (!empty($_SESSION['username'])) {
