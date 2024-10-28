@@ -14,11 +14,6 @@ $caption = $_POST['caption'];
 $age = (double)$_POST['age'];
 $location = $_POST['location'];
 
-$image = $_FILES['image']['name'];
-$temp = $_FILES['image']['tmp_name'];
-$error = $_FILES['image']['error'];
-
-
 if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
     echo "File uploaded successfully!";
 
