@@ -33,17 +33,17 @@ if (!empty($_GET['id'])) {
 
         <div class="form-group">
             <label for="type">Type</label>
-            <input type="text" id="type" name="type" class="form-control" value="<?php echo htmlspecialchars($pet['type']); ?>" required>
+            <input type="text" id="type" name="type" class="form-control" value="<?php $row['type']?>" required>
         </div>
 
         <div class="form-group">
             <label for="location">Location</label>
-            <input type="text" id="location" name="location" class="form-control" value="<?php echo htmlspecialchars($pet['location']); ?>" required>
+            <input type="text" id="location" name="location" class="form-control" value="<?php $row['location']?>" required>
         </div>
 
         <div class="form-group">
             <label for="image">Image</label>
-            <input type="file" class="form-control" id="image" name="ïmage" value="<?php echo htmlspecialchars($pet['image']);?>" required>
+            <input type="file" class="form-control" id="image" name="ïmage" value="<?php $row['image']?>" required>
         </div>
 
         <div class="form-group">
