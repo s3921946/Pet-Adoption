@@ -26,14 +26,15 @@ if ($error == 0) {
     $sql = "UPDATE pets SET petname = ?, type = ?, description = ?, image = ?, location = ? WHERE petid = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
-      "sssssis",
+      "sssssisi",
       $_POST['petname'], 
       $_POST['type'], 
       $_POST['description'], 
       $_FILES['image']['name'], 
       $_POST['caption'],
       $_POST['age'],
-      $_POST['location']);
+      $_POST['location'],
+      $_POST['petid']);
 
     $stmt->execute();
     print_r($stmt->error);
