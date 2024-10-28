@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <main class="container-fluid p-5">
     <h2>Edit Pet Information</h2>
-    <form method="POST">
-        <div class="form-group" action="edit-process.php" enctype="multipart/form-data">
+    <form method="POST" action="edit-process.php" enctype="multipart/form-data">
+        <div class="form-group">
             <label for="petname">Pet Name</label>
             <input type="text" id="petname" name="petname" class="form-control" value="<?php echo htmlspecialchars($pet['petname']); ?>" required>
         </div>
