@@ -30,6 +30,10 @@ if (!empty($_GET['id'])) {
             <label for="age">Age (in months)</label>
             <input type="number" id="age" name="age" class="form-control" value="<?php $row['age']?>" required>
         </div>
+        <div class="form-group">
+            <label for="description">description</label>
+            <input type="text" id="description" name="description" class="form-control" value="<?php $row['description']?>" required>
+        </div>
 
         <div class="form-group">
             <label for="type">Type</label>
