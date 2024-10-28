@@ -1,4 +1,3 @@
-<title>ADD</title>
 <!DOCTYPE html>
 <?php 
 session_start();
