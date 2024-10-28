@@ -4,6 +4,8 @@ include 'includes/header.inc';
 include 'includes/nav.inc';
 include 'includes/db_connect.inc';
 
+$sql = null;
+
 $petid = $_POST['petid'];
 $petname = $_POST['petname'];
 $pet_type = $_POST['type'];
