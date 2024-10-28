@@ -28,7 +28,7 @@ if (!empty($_GET['id'])) {
 
         <div class="form-group">
             <label for="age">Age (in months)</label>
-            <input type="number" id="age" name="age" class="form-control" value="<?php echo htmlspecialchars($pet['age']); ?>" required>
+            <input type="number" id="age" name="age" class="form-control" value="<?php $row['age']?>" required>
         </div>
 
         <div class="form-group">
