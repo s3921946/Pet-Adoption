@@ -12,7 +12,7 @@ include 'includes/nav.inc';
 include 'includes/db_connect.inc';
 ?>
     <main class="ysabeau-SC container" style="margin-bottom: 75px;">
-        <form class="mb-5 "method="POST" action="add-process.php" enctype="multipart/form-data">
+        <form class="mb-5" method="POST" action="add-process.php" enctype="multipart/form-data">
             <div class="form-group mb-4 mt-4">
                 <label for="name">Pet Name:<span class="text-danger">*</span></label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Provide the name for the pet" required>
