@@ -28,12 +28,12 @@ if ($error == 0) {
     $stmt = $conn->prepare($sql);
     $stmt->bind_param(
       "sssssis",
-      $_POST['name'], 
-      $_POST['pet-type'], 
+      $_POST['petname'], 
+      $_POST['type'], 
       $_POST['description'], 
-      $_FILES['pet-image']['name'], 
-      $_POST['image-cap'],
-      $_POST['age-months'],
+      $_FILES['image']['name'], 
+      $_POST['caption'],
+      $_POST['age'],
       $_POST['location']);
 
     $stmt->execute();
