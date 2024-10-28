@@ -4,9 +4,9 @@ include 'includes/header.inc';
 include 'includes/nav.inc';
 include 'includes/db_connect.inc';
 ?>
-<main class="container-fluid">
+<div class="container-fluid">
     <div class="row text-center mt-4 ysabeau-SC ">
-    <h2 class="fw-bold">Pets Victoria has a lot to offer!</h1>
+    <h2 class="fw-bold">Pets Victoria has a lot to offer!</h2>
     <p>For almost two decades, Pets Victoria has helped in creating true social change by bringing pet adoption into the mainstream. Our work has helped make a difference to the Victorian rescue community and thousands of pets in need of rescue and rehabilitation. But, until every pet is safe, respected, and loved, we all still have big, hairy work to do.</p>
         <form class="d-flex ms-auto p-2">
             <select class="form-control" id="myInput" onchange="searchFilterGallery()">
@@ -17,7 +17,7 @@ include 'includes/db_connect.inc';
             </select>
         </form>
     </div>
-</main>
+</div>
 <main class="container-fluid mb-5" id="items">
     <div class="row p-3 text-center">
         <?php 
