@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
-=======
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
 <?php
     include 'includes/header.inc';
     include 'includes/nav.inc';
@@ -66,9 +61,5 @@
 </main>
 
 <?php
-<<<<<<< HEAD
-include 'includes/footer.inc';?>
-=======
 include 'includes/footer.inc';
 ?>
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c

@@ -12,16 +12,10 @@
             $dbname = "s3921946";
             $imagePath = "/home/sl6/S3921946/public_html/wp/a2/images"; 
         }
-<<<<<<< HEAD
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        if ($conn->connect_error) 
-=======
 
         $conn = new mysqli($servername, $username, $password, $dbname);
         
         if ($conn->connect_error)  
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
             die("Connection failed: " . $conn->connect_error);
         
 function pre($var) {

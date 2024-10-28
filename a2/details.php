@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="en">
 <?php
-$title = "Pet Details";
-=======
-<?php
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
 include 'includes/header.inc';
 include 'includes/nav.inc';
 include 'includes/db_connect.inc';

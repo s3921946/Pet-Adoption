@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
-=======
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
+
 <?php
 $title = "Insert Pet Page";
 include 'includes/header.inc';
@@ -41,22 +40,12 @@ if ($error == 0) {
       $_POST['location'] );
     $stmt->execute();
     print_r($stmt->error);
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
     if ($stmt->affected_rows > 0) {
         echo "<p>Pets was added to the database.</p>";
              if (move_uploaded_file($_FILES['pet-image']['tmp_name'], $imagePath . "/" . $_FILES['pet-image']['name'])) {
                 echo "<p>File was added to the images directory.</p>";
                 } else {
                     echo "<p>File was NOT added to the images directory.</p>";
-<<<<<<< HEAD
-                }    
-=======
-                }
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
             } else {
             echo "<p>Country was not added to the database, image not uploaded.</p>";
         }
@@ -69,9 +58,4 @@ echo "\nInsert Data  Successful!";
 
 
 include 'includes/footer.inc';
-
-<<<<<<< HEAD
 ?>
-=======
-?>
->>>>>>> f67b69a580cf6f9e9f8ac302a7c06a70175b304c
