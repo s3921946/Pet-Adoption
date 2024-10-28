@@ -1,4 +1,4 @@
-<title>DELETE</title>
+
 <?php
 session_start();
 include 'includes/db_connect.inc';

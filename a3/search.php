@@ -1,4 +1,4 @@
-<title>SEARCH</title>
+
 <?php 
 session_start();
 include 'includes/header.inc';

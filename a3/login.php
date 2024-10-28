@@ -1,4 +1,4 @@
-<title>LOGIN</title>
+
 <?php 
 session_start();
 include 'includes/header.inc';

@@ -1,4 +1,4 @@
-<title>LOGOUT</title>
+
 <?php
 session_start();
 session_unset();

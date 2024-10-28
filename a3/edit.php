@@ -1,4 +1,4 @@
-<title>EDIT</title>
+
 <?php
 session_start();
 
