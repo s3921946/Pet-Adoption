@@ -52,7 +52,7 @@ if (!empty($_GET['id'])) {
 
         <div class="form-group">
             <label for="caption">Caption</label>
-            <input type="text" name="caption" id="caption" class="form-control" required><?php echo htmlspecialchars($pet['caption']); ?></>
+            <input type="text" name="caption" id="caption" class="form-control" required>
         </div>
 
         <div class="text-end">
