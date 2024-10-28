@@ -23,7 +23,7 @@ if (!empty($_GET['id'])) {
         <input type="hidden" name="petid" value="<?=$row['petid']?>">
         <div class="form-group">
             <label for="petname">Pet Name</label>
-            <input type="text" id="petname" name="petname" class="form-control" value="<?php echo htmlspecialchars($pet['petname']); ?>" required>
+            <input type="text" id="petname" name="petname" class="form-control" value="" required>
         </div>
 
         <div class="form-group">
