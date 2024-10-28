@@ -1,60 +1,20 @@
-
 <?php
 session_start();
-
-include 'includes/db_connect.inc'; 
-include 'includes/header.inc';
+include 'includes/db_connect.inc';
+include 'includes/header.inc'; 
 include 'includes/nav.inc'; 
 
-if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-    $id = $_GET['id'];
+$query = "SELECT * FROM pets WHERE petid = ?";
 
-    $query = "SELECT petid, petname, age, type, location, caption FROM pets WHERE petid = ?";
-    
-    if ($stmt = $conn->prepare($query)) {
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        
-        if ($result && $result->num_rows > 0) {
-            $pet = $result->fetch_assoc(); 
-        } else {
-            echo '<div class="alert alert-danger" role="alert">Pet not found.</div>';
-            exit();
-        }
-        $stmt->close();
-    } else {
-        echo '<div class="alert alert-danger" role="alert">Error preparing the query.</div>';
-    }
+if (!empty($_GET['id'])) {
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("i", $_GET['id']);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
 } else {
-    echo '<div class="alert alert-danger" role="alert">Invalid or no ID provided.</div>';
-    exit();
+    die("Could not find associated record ID.");
 }
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $petname = $_POST['petname'];
-    $age = $_POST['age'];
-    $type = $_POST['type'];
-    $location = $_POST['location'];
-    $caption = $_POST['caption'];
-
-    $update_query = "UPDATE pets SET petname = ?, age = ?, type = ?, location = ?, caption = ? WHERE petid = ?";
-
-    if ($stmt = $conn->prepare($update_query)) {
-        $stmt->bind_param("sisssi", $petname, $age, $type, $location, $caption, $id);
-
-        if ($stmt->execute()) {
-            echo '<div class="alert alert-success" role="alert">Pet details updated successfully.</div>';
-        } else {
-            echo '<div class="alert alert-danger" role="alert">Error updating the pet details.</div>';
-        }
-
-        $stmt->close();
-    } else {
-        echo '<div class="alert alert-danger" role="alert">Error preparing the update query.</div>';
-    }
-}
-
 ?>
 <main class="container-fluid p-5">
     <h2>Edit Pet Information</h2>
